@@ -1,9 +1,14 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
+    "alpinejs": "^3.15.0",
     "tailwindcss": "^4.1.12"
   },
   "scripts": {
-    "start": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+    "start": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx esbuild ./src/app.js --bundle --outfile=dist/app.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
   }
 }
