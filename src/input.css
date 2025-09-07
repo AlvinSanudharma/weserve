@@ -15,7 +15,7 @@
     animation: slideToLeft 10s linear infinite;
   }
 
-  .showcases-carousel:has(.object-cover:hover) {
+  .showcases-carousel:has(img.object-cover:hover) {
     animation-play-state: paused;
   }
 }
