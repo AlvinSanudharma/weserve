@@ -23,12 +23,13 @@
     x-on:scroll.window="isScrolled = window.pageYOffset > 0"
   >
     <nav
-      :class="isScrolled ? 'bg-white/50 backdrop-blur-2xl sticky top-0 overflow-hidden z-20 duration-100 ease-in-out' : 'bg-transparent'"
+      :class="isScrolled ? 'bg-transparent md:bg-white/50 backdrop-blur-none md:backdrop-blur-2xl md:sticky md:top-0 md:overflow-hidden md:z-20 md:duration-100 md:ease-in-out' : 'bg-transparent'"
     >
       <div
-        class="flex flex-row max-w-6xl mx-auto justify-between items-center pt-10 pb-12"
+        class="flex flex-row w-full md:max-w-6xl mx-auto justify-between items-center pt-10 pb-12"
       >
         <svg
+          class="ml-4 md:ml-0"
           width="177"
           height="42"
           viewBox="0 0 177 42"
@@ -84,7 +85,7 @@
             fill="#080C2E"
           />
         </svg>
-        <ul class="flex flex-row gap-x-7">
+        <ul class="hidden md:flex flex-row gap-x-7">
           <li>
             <a
               href="#"
@@ -121,7 +122,7 @@
             >
           </li>
         </ul>
-        <div class="flex flex-row items-center gap-x-3">
+        <div class="hidden md:flex flex-row items-center gap-x-3">
           <div class="bg-white rounded-full flex items-center p-[12px]">
             <a href="#">
               <svg
@@ -174,8 +175,8 @@
       </div>
     </nav>
 
-    <section class="hero max-w-6xl mx-auto py-12">
-      <div class="flex flex-row items-center justify-between">
+    <section class="hero w-full md:max-w-6xl mx-3 md:mx-auto py-12">
+      <div class="flex flex-col md:flex-row items-center md:justify-between">
         <div class="flex flex-col gap-y-10">
           <div
             class="small-badge w-fit flex flex-row bg-white rounded-full px-3 py-2 gap-x-2"
@@ -229,7 +230,7 @@
           </div>
           <div class="flex gap-y-2 flex-col">
             <h1
-              class="text-indigo-950 font-[Clash_Display] text-[70px] leading-none"
+              class="text-indigo-950 font-[Clash_Display] text-6xl md:text-[70px] leading-none"
             >
               Grow Online<br />
               Business Faster.
@@ -239,13 +240,18 @@
               users acquisition much user-friendly and boosting up sales.
             </p>
           </div>
-          <div class="flex flex-row gap-x-4 items-center">
+          <div
+            class="flex flex-col md:flex-row gap-y-4 md:gap-x-4 items-center"
+          >
             <a
               href="#"
-              class="text-lg bg-violet-700 text-white py-4 px-10 rounded-full font-semibold hover:bg-indigo-950"
+              class="w-full md:w-fit text-center text-lg bg-violet-700 text-white py-4 px-10 rounded-full font-semibold hover:bg-indigo-950"
               >Try Free Trial</a
             >
-            <a href="#" class="flex gap-x-2 text-violet-700 font-semibold">
+            <a
+              href="#"
+              class="w-full md:w-fit flex justify-center gap-x-2 text-violet-700 font-semibold"
+            >
               <svg
                 width="25"
                 height="24"
@@ -311,7 +317,7 @@
             </a>
           </div>
         </div>
-        <div class="flex flex-row items-center">
+        <div class="hidden md:flex md:flex-row md:items-center">
           <img
             src="../images/illustration-header.png"
             class="h-[550px]"
@@ -320,7 +326,7 @@
         </div>
       </div>
     </section>
-    <section class="partners max-w-6xl mx-auto py-12">
+    <section class="hidden md:block partners max-w-6xl mx-auto py-12">
       <div class="flex flex-row gap-x-10 items-center justify-center">
         <svg
           width="142"
@@ -628,13 +634,13 @@
         </svg>
       </div>
     </section>
-    <section class="features max-w-6xl mx-auto py-12">
+    <section class="features w-full md:max-w-6xl mx-3 md:mx-auto py-12">
       <h3
-        class="text-indigo-950 text-5xl font-[Clash_Display] text-center mb-8"
+        class="text-indigo-950 text-4xl md:text-5xl font-[Clash_Display] text-center mb-8"
       >
         Your Best Choice
       </h3>
-      <div class="grid grid-cols-4 gap-x-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-y-6 md:gap-x-8">
         <div
           class="my-card bg-white rounded-2xl py-8 px-5 flex flex-col gap-y-8"
         >
@@ -924,9 +930,9 @@
         </div>
       </div>
     </section>
-    <section class="benefits max-w-6xl mx-auto py-12">
+    <section class="benefits w-full md:max-w-6xl mx-3 md:mx-auto py-12">
       <div class="flex flex-row items-center gap-x-24">
-        <div class="flex flex-row items-center">
+        <div class="hidden md:flex md:flex-row md:items-center">
           <img
             src="../images/illustration-benefit.png"
             class="h-[550px]"
@@ -1155,13 +1161,18 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-row gap-x-4 items-center">
+          <div
+            class="flex flex-col md:flex-row gap-y-4 md:gap-x-4 items-center"
+          >
             <a
               href="#"
-              class="text-lg bg-violet-700 text-white py-4 px-10 rounded-full font-semibold hover:bg-indigo-950"
+              class="w-full text-center md:w-fit text-lg bg-violet-700 text-white py-4 px-10 rounded-full font-semibold hover:bg-indigo-950"
               >Explore More</a
             >
-            <a href="#" class="flex gap-x-2 text-violet-700 font-semibold">
+            <a
+              href="#"
+              class="flex w-full md:w-fit justify-center gap-x-2 text-violet-700 font-semibold"
+            >
               <svg
                 width="25"
                 height="24"
@@ -1229,10 +1240,10 @@
         </div>
       </div>
     </section>
-    <section class="showcases mx-auto py-12">
+    <section class="showcases md:mx-auto py-12">
       <div class="flex flex-col gap-y-8">
-        <div class="flex gap-y-2 flex-col text-center">
-          <h1 class="text-indigo-950 font-[Clash_Display] text-5xl">
+        <div class="flex gap-y-2 flex-col mx-3 text-left md:text-center">
+          <h1 class="text-indigo-950 font-[Clash_Display] text-3xl md:text-5xl">
             Our Showcase
           </h1>
           <p class="text-base leading-loose text-gray-500">
