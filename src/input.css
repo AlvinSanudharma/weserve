@@ -18,4 +18,15 @@
   .showcases-carousel:has(.group:hover) {
     animation-play-state: paused;
   }
+
+  @media (max-width: 768px) {
+    .showcases-carousel {
+      animation: none;
+      overflow: auto;
+    }
+
+    .showcases-carousel::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
