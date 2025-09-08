@@ -6,7 +6,9 @@
   },
   "scripts": {
     "start": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx esbuild ./src/app.js --bundle --outfile=dist/app.js"
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
+    "build:js": "npx esbuild ./src/app.js --bundle --outfile=dist/app.js",
+    "build": "npm run build:css && npm run build:js"
   },
   "devDependencies": {
     "esbuild": "^0.25.9"
