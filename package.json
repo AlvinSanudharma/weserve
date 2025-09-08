@@ -8,7 +8,7 @@
     "start": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
     "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
     "build:js": "npx esbuild ./src/app.js --bundle --outfile=dist/app.js",
-    "build:html": "cp src/index.html dist/index.html && sed -i '' 's|../dist/|./|g' dist/index.html",
+    "build:html": "cp src/index.html dist/index.html && sed -i 's|../dist/|./|g' dist/index.html",
     "build": "npm run build:css && npm run build:js && npm run build:html"
   },
   "devDependencies": {
